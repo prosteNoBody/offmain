@@ -1,0 +1,44 @@
+{
+  "name": "offmain",
+  "version": "0.0.0",
+  "description": "Build plugin that moves marked JavaScript regions into Web Workers",
+  "license": "MIT",
+  "repository": "github:prosteNoBody/offmain",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/plugin/index.d.ts",
+      "default": "./dist/plugin/index.js"
+    },
+    "./runtime": {
+      "types": "./dist/runtime/index.d.ts",
+      "default": "./dist/runtime/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p src/plugin && tsc -p src/runtime",
+    "typecheck": "tsc -p src/plugin --noEmit && tsc -p src/runtime --noEmit && tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.2",
+    "@vitest/browser-playwright": "^5.1.1",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "playwright": "^1.65.1",
+    "prettier": "^3.10.1",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.73.0",
+    "vitest": "^5.1.1"
+  }
+}
