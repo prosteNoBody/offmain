@@ -12,6 +12,7 @@ export default defineConfig({
 				},
 			},
 			{
+				define: { __OFFMAIN_DEV__: 'true' },
 				test: {
 					name: 'runtime',
 					include: ['tests/runtime/**/*.test.ts'],

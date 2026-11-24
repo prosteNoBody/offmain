@@ -19,6 +19,10 @@
 		"./runtime": {
 			"types": "./dist/runtime/index.d.ts",
 			"default": "./dist/runtime/index.js"
+		},
+		"./runtime/worker": {
+			"types": "./dist/runtime/worker.d.ts",
+			"default": "./dist/runtime/worker.js"
 		}
 	},
 	"scripts": {
