@@ -1,1 +1,1 @@
-export const name = "offmain";
+export const name = 'offmain';
